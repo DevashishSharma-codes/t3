@@ -1,6 +1,6 @@
 import React from 'react'
-import { currentUser } from '../modules/authentication/actions'
 import { ArrowUp, Paperclip, Code, Lightbulb, Compass, Database } from 'lucide-react'
+import { currentUser } from '@/app/modules/authentication/actions';
 
 const promptSuggestions = [
   {
@@ -24,8 +24,7 @@ const promptSuggestions = [
     subtitle: "understand React 19 server actions & suspense"
   }
 ];
-
-const Page = async () => {
+const ChatMsgView = async () => {
   const user = await currentUser();
   const firstName = user?.name ? user.name.split(' ')[0] : 'there';
 
@@ -108,4 +107,4 @@ const Page = async () => {
   );
 }
 
-export default Page;
+export default ChatMsgView
